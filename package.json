@@ -1,0 +1,56 @@
+{
+  "name": "geeksturf",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tinymce/tinymce-react": "^4.3.0",
+    "filepond": "^4.30.4",
+    "filepond-plugin-image-exif-orientation": "^1.0.11",
+    "filepond-plugin-image-preview": "^4.6.11",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-countup": "^6.4.1",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "18.2.0",
+    "react-dropify": "^0.0.48",
+    "react-fast-marquee": "^1.3.5",
+    "react-filepond": "^7.1.2",
+    "react-quill": "^2.0.0",
+    "react-select": "^5.7.0",
+    "react-slick": "^0.29.0",
+    "swiper": "^8.4.5",
+    "tinymce": "^6.3.2",
+    "yet-another-react-lightbox": "^2.6.2"
+  },
+  "devDependencies": {
+    "eslint": "8.33.0",
+    "eslint-config-next": "13.1.6"
+  },
+  "description": "Geeksturf is a vibrant online platform that serves as a thriving community and resource hub for passionate individuals immersed in geek culture and the tech industry. Our mission is to connect geeks with exciting job opportunities, freelancing gigs, and a supportive network of like-minded individuals.",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rabrolino27/geeksturf-fe.git"
+  },
+  "keywords": [
+    "Jobs",
+    "Staff",
+    "extension",
+    "staff",
+    "outsourcing",
+    "freelacing",
+    "employment"
+  ],
+  "author": "Brentsoft Technologies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rabrolino27/geeksturf-fe/issues"
+  },
+  "homepage": "https://github.com/Rabrolino27/geeksturf-fe#readme"
+}
