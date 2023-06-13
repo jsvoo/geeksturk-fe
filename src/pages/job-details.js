@@ -257,7 +257,7 @@ function jobDetails() {
                     </li>
                   </ul>
                 </div>
-                <div className="email-area mb-50">
+                {/* <div className="email-area mb-50">
                   <div className="title">
                     <h6>
                       <img src="assets/images/icon/email-2.svg" alt="" />
@@ -267,8 +267,8 @@ function jobDetails() {
                   <p>
                     Send your resume at <a href="#">info@example.com</a>
                   </p>
-                </div>
-                <div className="location-area">
+                </div> */}
+                {/* <div className="location-area">
                   <h6>Get Location:</h6>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.564763018799!2d90.36349791490355!3d23.834071191491947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1674212581590!5m2!1sen!2sbd"
@@ -277,7 +277,7 @@ function jobDetails() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-12 mb-100">

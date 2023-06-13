@@ -9,7 +9,7 @@ function Home3About() {
             <div className="about-left">
               <div className="section-title1 mb-60">
                 <h2>
-                  To Know <span>About</span> JOBES
+                  To Know <span>About</span> Geeksturf
                 </h2>
                 <p>
                   To much valuable feed from our trusted users in world-wide.

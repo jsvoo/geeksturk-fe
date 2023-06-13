@@ -207,7 +207,7 @@ function CompanyListSidebar() {
             </div>
           </div>
         </div>
-        <div className="job-widget mb-20">
+        {/* <div className="job-widget mb-20">
           <div className="check-box-item">
             <h5 className="job-widget-title">Date of Post</h5>
             <div className="checkbox-container">
@@ -255,7 +255,7 @@ function CompanyListSidebar() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="job-widget mb-20">
           <div className="check-box-item">
             <h5 className="job-widget-title mb-10">Salary Range</h5>

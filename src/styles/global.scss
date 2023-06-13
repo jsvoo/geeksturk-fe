@@ -1,0 +1,35 @@
+ .header-logo-section{
+    cursor: pointer;
+   .logo{
+    width: 100px;
+    height:50px; 
+    background-color: #00A7AC;
+ 
+
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+   }
+
+   .motto{
+    padding: 0;
+    margin: 0;
+    font-size: 10px; 
+    line-height: normal;
+    font-weight: 600;
+    color: black;
+   }
+ }
+
+//  .business-area{
+//     border-left: 1px solid grey;
+//     a{
+//         padding: 5px;
+//     }
+//     padding-left: 10px;
+//     // padding-left: 10px;
+//  }

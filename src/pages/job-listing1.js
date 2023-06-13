@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { BiFilterAlt } from "react-icons/bi";
 import React, { useEffect, useState } from "react";
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
@@ -10,6 +11,7 @@ function JobListing1() {
     document.body.className = currentPage === "/job-listing1" ? "bg-wight" : "";
   });
   const [isGrid, setIsGrid] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
   const handleGridClick = () => {
     setIsGrid(true);
   };
@@ -17,14 +19,23 @@ function JobListing1() {
   const handleListClick = () => {
     setIsGrid(false);
   };
+
+  const handleToggle = () => {
+    setShowFilter(!showFilter);
+  };
   return (
     <Layout>
       <Breadcrumb pageName="Job Listing" pageTitle="Job Listing" />
-      <div className="job-listing-area pt-120 mb-120">
+  
+     
+     
+      <div className="job-listing-area pt-20 mb-120 job-listing-container">
+      
+      
         <div className="container">
           <div className="row g-lg-4 gy-5">
             <div className="col-lg-4">
-              <div className="job-sidebar">
+              <div className="job-sidebar ">
                 <div className="job-widget style-1 mb-20">
                   <div className="check-box-item">
                     <h5 className="job-widget-title">Job Category</h5>
@@ -130,6 +141,7 @@ function JobListing1() {
                     </div>
                   </div>
                 </div>
+
                 <div className="job-widget mb-20">
                   <div className="check-box-item">
                     <h5 className="job-widget-title">Type of Employments</h5>
@@ -195,7 +207,8 @@ function JobListing1() {
                     </div>
                   </div>
                 </div>
-                <div className="job-widget mb-20">
+
+                {/* <div className="job-widget mb-20">
                   <div className="check-box-item">
                     <h5 className="job-widget-title">Date of Post</h5>
                     <div className="checkbox-container">
@@ -243,7 +256,8 @@ function JobListing1() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> */}
+
                 <div className="job-widget mb-20">
                   <div className="check-box-item">
                     <h5 className="job-widget-title mb-15">Salary Range</h5>
@@ -328,7 +342,7 @@ function JobListing1() {
                     </div>
                   </div>
                 </div>
-                <div className="job-widget">
+                {/* <div className="job-widget">
                   <div className="check-box-item">
                     <h5 className="job-widget-title mb-10">Date of Post</h5>
                     <ul className="tags">
@@ -389,7 +403,7 @@ function JobListing1() {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 <div className="job-widget-btn mb-20 mt-10">
                   <Link legacyBehavior href="#">
                     <a className="primry-btn-2 lg-btn text-center">
@@ -398,7 +412,10 @@ function JobListing1() {
                   </Link>
                 </div>
               </div>
+
+            
             </div>
+
             <div className="col-lg-8">
               <div className="job-listing-wrrap">
                 <div className="row g-4 mb-25">
@@ -459,11 +476,298 @@ function JobListing1() {
                               </svg>
                             </div>
                           </li>
+
+                          <li style={{ cursor: "pointer" }}>
+                            <div
+                              className="hide-on-desktop"
+                              onClick={handleToggle}
+                            >
+                              <BiFilterAlt className="fs-5" />
+                            </div>
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                {showFilter && (
+                <div className="job-sidebar hide-on-desktop">
+                  <div className="job-widget style-1 mb-20">
+                    <div className="check-box-item">
+                      <h5 className="job-widget-title">Job Category</h5>
+                      <div className="checkbox-container">
+                        <ul>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Health Care</span>
+                              <span className="qty">(80)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">
+                                Account &amp; Finance
+                              </span>
+                              <span className="qty">(80)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Transportation</span>
+                              <span className="qty">(100)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">
+                                Medical &amp; Finance
+                              </span>
+                              <span className="qty">(120)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Development</span>
+                              <span className="qty">(30)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Engineering</span>
+                              <span className="qty">(10)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Receptionist</span>
+                              <span className="qty">(70)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Non-Profit Org.</span>
+                              <span className="qty">(100)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Health Care</span>
+                              <span className="qty">(80)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">
+                                Account &amp; Finance
+                              </span>
+                              <span className="qty">(80)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Transportation</span>
+                              <span className="qty">(100)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">
+                                Medical &amp; Finance
+                              </span>
+                              <span className="qty">(120)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="job-widget mb-20">
+                    <div className="check-box-item">
+                      <h5 className="job-widget-title">Type of Employments</h5>
+                      <div className="checkbox-container">
+                        <ul>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Full Time</span>
+                              <span className="qty">(30)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Freelance</span>
+                              <span className="qty">(10)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Part Time</span>
+                              <span className="qty">(100)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Remote</span>
+                              <span className="qty">(60)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Temporary</span>
+                              <span className="qty">(40)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Permanent</span>
+                              <span className="qty">(30)</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label className="containerss">
+                              <input type="checkbox" />
+                              <span className="checkmark" />
+                              <span className="text">Internship</span>
+                              <span className="qty">(80)</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="job-widget mb-20">
+                    <div className="check-box-item">
+                      <h5 className="job-widget-title mb-15">Salary Range</h5>
+                      <div className="range-widget">
+                        <range-slider
+                          minvalue={1}
+                          maxvalue={1500}
+                          startminpos={300}
+                          startmaxpos={1200}
+                          um="K"
+                        />
+                        <template id="range-slider" />
+                      </div>
+                      <div className="salary-container">
+                        <ul>
+                          <li>
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              id="salary-1"
+                              name="showInputBox"
+                              defaultValue="salary-1"
+                            />
+                            <div className="content">
+                              <span className="text">$5K-$15K</span>
+                              <span className="qty">(80)</span>
+                            </div>
+                          </li>
+                          <li>
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              id="salary-2"
+                              name="showInputBox"
+                              defaultValue="salary-2"
+                            />
+                            <div className="content">
+                              <span className="text">$20K-$30K</span>
+                              <span className="qty">(100)</span>
+                            </div>
+                          </li>
+                          <li>
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              id="salary-3"
+                              name="showInputBox"
+                              defaultValue="salary-3"
+                            />
+                            <div className="content">
+                              <span className="text">$35K-$50K</span>
+                              <span className="qty">(100)</span>
+                            </div>
+                          </li>
+                          <li>
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              id="salary-4"
+                              name="showInputBox"
+                              defaultValue="salary-4"
+                            />
+                            <div className="content">
+                              <span className="text">$55K-$70K</span>
+                              <span className="qty">(120)</span>
+                            </div>
+                          </li>
+                          <li>
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              id="salary-5"
+                              name="showInputBox"
+                              defaultValue="salary-5"
+                            />
+                            <div className="content">
+                              <span className="text">$75K-$100K</span>
+                              <span className="qty">(30)</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="job-widget-btn mb-20 mt-10">
+                    <Link legacyBehavior href="#">
+                      <a className="primry-btn-2 lg-btn text-center">
+                        Go to Job Alert
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+
                 {!isGrid ? (
                   <div className="row ">
                     <div className="col-lg-12 mb-30">

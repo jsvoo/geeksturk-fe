@@ -1,0 +1,43 @@
+// .category-container{
+//    h2{
+//     color: red !important;
+//    }
+// }
+
+.filter-icon{
+  font-size: 30px;
+}
+
+.hide-on-desktop{
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  
+    .category-container {
+      display: none;
+    }
+.job-listing-container{
+  .job-sidebar{
+    display: none;
+  }
+
+  .hide-on-desktop{
+    display: contents;
+  }
+}
+
+.company-listing-container{
+  .job-sidebar{
+    display: none;
+  }
+
+  .hide-on-desktop{
+    display: contents;
+  }
+}
+    
+
+   
+  }

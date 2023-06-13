@@ -205,14 +205,14 @@ function Footer3() {
             <div className="col-lg-6 d-flex  justify-content-lg-start justify-content-center">
               <div className="copyright-area">
                 <p>
-                  @Copyright 2023 <a href="#">JOBES</a> | Design By{" "}
+                  @Copyright 2023 <a href="#">Geeksturf</a> | Design By{" "}
                   <a href="https://www.Egenstheme.com/">Egenstheme</a>
                 </p>
               </div>
             </div>
             <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
               <div className="social-area">
-                <h6>Follow JOBES:</h6>
+                <h6>Follow Geeksturf:</h6>
                 <ul>
                   <li>
                     <a href="https://www.facebook.com/">

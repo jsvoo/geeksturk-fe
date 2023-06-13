@@ -19,6 +19,8 @@ function JobPost() {
   const [showInputBox, setShowInputBox] = useState("");
   const [inputValue, setInputValue] = React.useState("");
   const [value, setValue] = React.useState([]);
+  const [requestHand, setRequestHand] = useState("");
+  const [jobType, setJobType] = useState("");
 
   const handleKeyDown = (event) => {
     if (!inputValue) return;
@@ -227,17 +229,148 @@ function JobPost() {
                         </div>
                       </div>
                     </div>
+
                     <div className="col-md-6">
-                      <div className="form-inner mb-25">
+                      <div className="form-inner">
+                        <div className="salary-wrap">
+                          <label className="label">Employment Type*</label>
+                          <div className="salery-select-area">
+                            <div className="single-salery">
+                              <input
+                                className="form-check-input"
+                                type="radio"
+                                id="staffExtension"
+                                name="employmentType"
+                                value="staffExtension"
+                                onChange={(e) => handleInputChange(e)}
+                              />
+                              <label htmlFor="staffExtension">
+                                Staff Extension
+                              </label>
+                              <br />
+                            </div>
+
+                            <div className="single-salery">
+                              <input
+                                className="form-check-input"
+                                type="radio"
+                                id="expressHiring"
+                                name="employmentType"
+                                defaultValue="expressHiring"
+                                onChange={handleInputChange}
+                              />
+                              <label htmlFor="expressHiring">
+                                Express Hiring
+                              </label>
+                              <br />
+                            </div>
+
+                            {/* <div className="single-salery">
+                              <input
+                                className="form-check-input"
+                                type="radio"
+                                id="otherEmploymentType"
+                                name="employmentType"
+                                defaultValue="otherEmploymentType"
+                                onChange={handleInputChange}
+                              />
+                              <label htmlFor="otherEmploymentType">
+                                Others
+                              </label>
+                              <br />
+                            </div> */}
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-lg-12">
+                            {showInputBox === "staffExtension" && (
+                              <div
+                                className="mb-2"
+                                style={{ fontSize: "10px" }}
+                              >
+                                Geeksturf facilitates the end-to-end hiring
+                                process and provides you with recommendations
+                                for qualified employees from within the
+                                Geeksturf network. Once you make a hiring
+                                decision, Geeksturf assists in creating an
+                                agreement that enables the selected employee to
+                                work with your company under Geeksturf's
+                                licensing arrangement
+                              </div>
+                            )}
+
+                            {showInputBox === "expressHiring" && (
+                              <div
+                                className="mb-2"
+                                style={{ fontSize: "10px" }}
+                              >
+                                Geeksturf facilitates all the hiring process.
+                                This service costs $50
+                              </div>
+                            )}
+                          </div>
+                          <div className="col-lg-12">
+                            <div id="rangePrice">
+                              {showInputBox === "rangePrice" && (
+                                <div className="row">
+                                  <div className="col-lg-6 mb-25">
+                                    <div className="input-area">
+                                      <img
+                                        src="assets/images/icon/salary-2.svg"
+                                        alt=""
+                                      />
+                                      <input
+                                        type="text"
+                                        name="job_range_price_one"
+                                        placeholder="Max Salary"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-lg-6">
+                                    <div className="input-area">
+                                      <img
+                                        src="assets/images/icon/salary-2.svg"
+                                        alt=""
+                                      />
+                                      <input
+                                        type="text"
+                                        name="job_range_price_two"
+                                        placeholder="Min Salary"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-inner mb-2">
                         <label>Job Type*</label>
                         <div className="input-area">
                           <img src="assets/images/icon/company-2.svg" alt="" />
-                          <select className="select1">
+                          <select
+                            className="select1"
+                            onChange={(e) => {
+                              setJobType(e.target.value);
+                            }}
+                          >
                             <option value={0}>Full Time</option>
                             <option value={1}>Part Time</option>
+                            <option value={"freelancing"}>Freelancing</option>
+                            <option value={2}>Contract</option>
                           </select>
                         </div>
                       </div>
+                      {jobType === "freelancing" && (
+                        <div className="mb-25 " style={{ fontSize: "12px" }}>
+                          {" "}
+                          Geeksturf takes care of managing and overseeing your
+                          project. $1500 min charge applies
+                        </div>
+                      )}
                     </div>
                     <div className="col-md-6">
                       <div className="form-inner mb-25">
@@ -315,13 +448,72 @@ function JobPost() {
                     <div className="col-md-12">
                       <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
                         <div className="form-group two">
-                          <input type="checkbox" id="html" />
-                          <label htmlFor="html">
-                            Here, I accepted company terms &amp; conditions.
+                          <input type="checkbox" id="terms1" />
+                          <label htmlFor="terms1">
+                            I accepted Geeksturf Terms and Condition
                           </label>
                         </div>
                       </div>
+                      <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div className="form-group two">
+                          <input
+                            type="checkbox"
+                            id="terms2"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setRequestHand("handInDevelopment");
+                              } else {
+                                setRequestHand("");
+                              }
+                            }}
+                          />
+                          <label htmlFor="terms2">
+                            Request Geeksturf Hands in Development
+                          </label>
+                        </div>
+                      </div>
+                      {requestHand === "handInDevelopment" && (
+                        <div className="mb-2" style={{ fontSize: "10px" }}>
+                          Requesting the assistance of Geeksturf's in-house
+                          developers. Geeksturf will evaluate the feasibility of
+                          working on your project. In case of unavailability,
+                          Geeksturf will provide suitable recommendations. The
+                          minimum cost for this service is $8,000 if your
+                          request is accepted.
+                        </div>
+                      )}
+
+                      {/* <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div className="form-group two">
+                          <input
+                            type="checkbox"
+                            id="terms3"
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setRequestHand("projectManager");
+                              } else {
+                                setRequestHand("");
+                              }
+                            }}
+                          />
+                          <label htmlFor="terms3">
+                            Request Geeksturf as Project Manager
+                          </label>
+                        </div>
+                      </div> */}
+
+                      {/* {requestHand === "projectManager" && (
+                        <div className="mb-2" style={{ fontSize: "10px" }}>
+                          Requesting the assistance of Geeksturf's in-house
+                          developers. Geeksturf will evaluate the feasibility of
+                          working on your project. In case of unavailability,
+                          Geeksturf will provide suitable recommendations. The
+                          minimum cost for this service is $8,000 if your
+                          request is accepted.
+                        </div>
+                      )} */}
                     </div>
+
                     <div className="col-md-12">
                       <div className="form-inner">
                         <button

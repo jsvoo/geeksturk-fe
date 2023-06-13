@@ -139,7 +139,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-end justify-content-center">
+          {/* <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-end justify-content-center">
             <div className="footer-widget four">
               <div className="widget-title">
                 <h5>Download App</h5>
@@ -159,7 +159,7 @@ function Footer() {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="footer-btm">
           <div className="footer-logo">
@@ -202,14 +202,14 @@ function Footer() {
             <div className="col-lg-6 d-flex  justify-content-lg-start justify-content-center">
               <div className="copyright-area">
                 <p>
-                  @Copyright 2023 <a href="#">JOBES</a> | Design By
+                  @Copyright 2023 <a href="#">Geeksturf</a> | Design By
                   <a href="https://www.Egenstheme.com/">&nbsp;Egenstheme</a>
                 </p>
               </div>
             </div>
             <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
               <div className="social-area">
-                <h6>Follow JOBES:</h6>
+                <h6>Follow Geeksturf:</h6>
                 <ul>
                   <li>
                     <a href="https://www.facebook.com/">

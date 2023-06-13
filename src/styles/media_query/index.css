@@ -1,0 +1,25 @@
+.filter-icon {
+  font-size: 30px;
+}
+
+.hide-on-desktop {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .category-container {
+    display: none;
+  }
+  .job-listing-container .job-sidebar {
+    display: none;
+  }
+  .job-listing-container .hide-on-desktop {
+    display: contents;
+  }
+  .company-listing-container .job-sidebar {
+    display: none;
+  }
+  .company-listing-container .hide-on-desktop {
+    display: contents;
+  }
+}/*# sourceMappingURL=index.css.map */

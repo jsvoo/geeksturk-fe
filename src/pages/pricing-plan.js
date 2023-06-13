@@ -280,7 +280,7 @@ function PricingPlan() {
             <div className="col-lg-12">
               <div className="add-area">
                 <p>
-                  <span>N.B:</span> If are you never posted a job in JOBES? Get
+                  <span>N.B:</span> If are you never posted a job in Geeksturf? Get
                   15% off in your first job post.
                 </p>
                 <a className="primry-btn-1" href="#">
@@ -290,7 +290,7 @@ function PricingPlan() {
             </div>
             <div className="col-lg-12">
               <div className="advertuse-area">
-                <h4>Why Choose Only JOBES for your business Advertise</h4>
+                <h4>Why Choose Only Geeksturf for your business Advertise</h4>
                 <ul>
                   <li>
                     <p>

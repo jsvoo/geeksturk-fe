@@ -9,7 +9,7 @@ function Home3topCompany() {
           <div className="col-12 d-flex flex-wrap align-items-end justify-content-md-between justify-content-start gap-3">
             <div className="section-title1">
               <h2>
-                JOBES Top <span>Companies</span>
+                Geeksturf Top <span>Companies</span>
               </h2>
               <p>To much valuable feed from our trusted users in world-wide.</p>
             </div>

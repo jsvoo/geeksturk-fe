@@ -4,12 +4,12 @@ import Select from "react-select";
 function Banner2() {
   const [selectedOption, setSelectedOption] = useState(null);
   const options = [
-    { value: "1", label: "UI/UX" },
-    { value: "2", label: "Marketing Coordinator" },
-    { value: "3", label: "Medical Assistant" },
-    { value: "4", label: "Project Manager" },
-    { value: "5", label: "Librarian" },
-    { value: "6", label: "Account Executive" },
+    { value: "1", label: "Lagos" },
+    { value: "2", label: "Abuja" },
+    { value: "3", label: "Kano" },
+    { value: "4", label: "Lafia" },
+    { value: "5", label: "Lokoja" },
+    { value: "6", label: "Maitama" },
   ];
   const customStyles = {
     menu: (provided, state) => ({
@@ -90,7 +90,7 @@ function Banner2() {
                         menuColor="#333"
                         defaultValue={selectedOption}
                         options={options}
-                        placeholder="Select Category"
+                        placeholder="Select Location"
                       />
                     </div>
                     <div className="form-inner">
@@ -135,7 +135,7 @@ function Banner2() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> 
             <div className="col-lg-5 d-flex jsutify-content-end">
               <div className="banner-image-area">
                 <div className="banner-img-left">

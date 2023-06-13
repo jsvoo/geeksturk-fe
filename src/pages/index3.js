@@ -21,7 +21,7 @@ function Index3() {
   return (
     <>
         <Head>
-        <title>JOBES- Job Portal NextJs Template</title>
+        <title>Geeksturf- Job Portal NextJs Template</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
         <meta

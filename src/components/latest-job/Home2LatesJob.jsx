@@ -9,7 +9,7 @@ function Home2LatesJob() {
           <div className="col-12 d-flex flex-wrap align-items-end justify-content-md-between justify-content-start gap-3">
             <div className="section-title1">
               <h2>
-                JOBES <span>Latest</span> Job
+                Geeksturf <span>Latest</span> Job
               </h2>
               <p>
                 To choose your trending job dream &amp; to make future bright.

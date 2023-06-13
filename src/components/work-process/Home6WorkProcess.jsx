@@ -8,7 +8,7 @@ function Home6WorkProcess() {
           <div className="col-12 d-flex justify-content-center">
             <div className="section-title2 text-center">
               <h2>
-                JOBES <span>Working</span> Processed
+                Geeksturf <span>Working</span> Processed
               </h2>
               <p>
                 To choose your trending job dream &amp; to make future bright.

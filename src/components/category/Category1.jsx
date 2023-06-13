@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import trandingJobData from "../../data/trandingJob.json";
+import trandingJobData from "../../data/trandingJob.json"; 
 function Category1() {
   return (
     <>
-      <div className="home1-category pt-120 mb-120">
+      <div className="home1-category mb-120 category-container">
         <div className="container">
           <div className="row mb-60">
             <div className="col-12 d-flex flex-wrap align-items-end justify-content-md-between justify-content-start gap-3">
