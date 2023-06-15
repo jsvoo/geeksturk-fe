@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Select from "react-select";
 function Banner2() {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -48,20 +49,39 @@ function Banner2() {
       color: "#00a7ac",
     }),
   };
+  const [showBg, setShowBg] = useState("")
+  const bgImages = [
+    "assets/images/bg/banner1.png",
+    "assets/images/bg/banner2.png",
+    "assets/images/bg/banner3.png",
+    "assets/images/bg/banner4.png",
+
+  ]
+
+  
+
+  useEffect(()=>{
+    const rand = Math.floor( Math.random()*4)
+    setShowBg(rand)
+  })
+
+console.log(showBg)
   return (
-    <div className="hero2">
+    <div className="hero2"
+    style={{ backgroundImage: `url(${bgImages[showBg]})` }}
+    >
       <div className="hero-wapper">
         <div className="container-fluid px-0">
           <div className="row">
             <div className="col-lg-7 d-flex align-items-center">
               <div className="hero-content">
                 <h1>
-                  To Choose Your Level Best&nbsp; <span>Dream Career.</span>
+                  Select Your Idea Career Path&nbsp; <span>At Your Highest Potential.</span>
                 </h1>
-                <p>
+                {/* <p>
                   <span>2400</span> Peoples are daily search in this portal,{" "}
                   <span>100</span> user added job portal!
-                </p>
+                </p> */}
                 <div className="job-search-area">
                   <form>
                     <div className="form-inner job-title">
@@ -101,7 +121,7 @@ function Banner2() {
                     </div>
                   </form>
                 </div>
-                <div className="suggest-tag">
+                {/* <div className="suggest-tag">
                   <h6>
                     <i className="bi bi-bookmark-fill" />
                     Suggested Tag:
@@ -133,11 +153,11 @@ function Banner2() {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div> 
             <div className="col-lg-5 d-flex jsutify-content-end">
-              <div className="banner-image-area">
+              {/* <div className="banner-image-area">
                 <div className="banner-img-left">
                   <div className="banner-img1">
                     <img
@@ -158,7 +178,7 @@ function Banner2() {
                   <div className="banner-img3">
                     <img
                       className="img-fluid"
-                      src="assets/images/bg/home2-banner-03.png"
+                      src="assets/images/bg/banner1.png"
                       alt=""
                     />
                   </div>
@@ -199,7 +219,7 @@ function Banner2() {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

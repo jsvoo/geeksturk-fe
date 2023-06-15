@@ -28,7 +28,7 @@ function CompanyListing1() {
   };
   return (
     <Layout>
-      <Breadcrumb pageName="Company Listing-1" pageTitle="Company Listing-1" />
+      {/* <Breadcrumb pageName="Company Listing-1" pageTitle="Company Listing-1" /> */}
       <div className="company-listing-area pt-120 mb-120 job-listing-container">
         <div className="container">
           <div className="row g-lg-4 gy-5 ">

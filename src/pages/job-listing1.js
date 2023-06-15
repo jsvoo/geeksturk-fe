@@ -25,7 +25,7 @@ function JobListing1() {
   };
   return (
     <Layout>
-      <Breadcrumb pageName="Job Listing" pageTitle="Job Listing" />
+      {/* <Breadcrumb pageName="Job Listing" pageTitle="Job Listing" /> */}
   
      
      

@@ -18,9 +18,14 @@ function JobPost() {
   const [startDate, setStartDate] = useState(new Date());
   const [showInputBox, setShowInputBox] = useState("");
   const [inputValue, setInputValue] = React.useState("");
-  const [value, setValue] = React.useState([]);
-  const [requestHand, setRequestHand] = useState("");
-  const [jobType, setJobType] = useState("");
+  const [value, setValue] = React.useState([]); 
+  const [jobType, setJobType] = useState(""); 
+
+  const [notify, setNotify] = useState({
+    expressHiring: false,
+    development: false,
+    projectManager: false,
+  });
 
   const handleKeyDown = (event) => {
     if (!inputValue) return;
@@ -77,7 +82,7 @@ function JobPost() {
   };
   return (
     <Layout>
-      <Breadcrumb pageName="Post A Jobs" pageTitle="Post A Jobs" />
+      {/* <Breadcrumb pageName="Post A Jobs" pageTitle="Post A Jobs" /> */}
       <div className="job-post-area pt-120 mb-120">
         <div className="container">
           <div className="row">
@@ -232,9 +237,23 @@ function JobPost() {
 
                     <div className="col-md-6">
                       <div className="form-inner">
-                        <div className="salary-wrap">
+                        {/* <div className="salary-wrap">
                           <label className="label">Employment Type*</label>
                           <div className="salery-select-area">
+                            <div className="single-salery">
+                              <input
+                                className="form-check-input"
+                                type="radio"
+                                id="expressHiring"
+                                name="employmentType"
+                                defaultValue="expressHiring"
+                                defaultChecked
+                                onChange={handleInputChange}
+                              />
+                              <label htmlFor="expressHiring">Default</label>
+                              <br />
+                            </div>
+
                             <div className="single-salery">
                               <input
                                 className="form-check-input"
@@ -249,38 +268,23 @@ function JobPost() {
                               </label>
                               <br />
                             </div>
-
-                            <div className="single-salery">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                id="expressHiring"
-                                name="employmentType"
-                                defaultValue="expressHiring"
-                                onChange={handleInputChange}
-                              />
-                              <label htmlFor="expressHiring">
-                                Express Hiring
-                              </label>
-                              <br />
-                            </div>
-
-                            {/* <div className="single-salery">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                id="otherEmploymentType"
-                                name="employmentType"
-                                defaultValue="otherEmploymentType"
-                                onChange={handleInputChange}
-                              />
-                              <label htmlFor="otherEmploymentType">
-                                Others
-                              </label>
-                              <br />
-                            </div> */}
+ 
                           </div>
+                        </div> */}
+
+                        <div className="form-inner ">
+                        <label>Employment Type*</label>
+                        <div className="input-area">
+                          <img src="assets/images/icon/company-2.svg"  alt="" />
+                          <select className="select1"
+                            onChange={(e) => handleInputChange(e)}
+                          >
+                            <option value={"default"}>Default</option>
+                            <option value={"staffExtension"}>Staff Extension</option>
+                           
+                          </select>
                         </div>
+                      </div>
                         <div className="row">
                           <div className="col-lg-12">
                             {showInputBox === "staffExtension" && (
@@ -299,15 +303,7 @@ function JobPost() {
                               </div>
                             )}
 
-                            {showInputBox === "expressHiring" && (
-                              <div
-                                className="mb-2"
-                                style={{ fontSize: "10px" }}
-                              >
-                                Geeksturf facilitates all the hiring process.
-                                This service costs $50
-                              </div>
-                            )}
+                             
                           </div>
                           <div className="col-lg-12">
                             <div id="rangePrice">
@@ -364,13 +360,6 @@ function JobPost() {
                           </select>
                         </div>
                       </div>
-                      {jobType === "freelancing" && (
-                        <div className="mb-25 " style={{ fontSize: "12px" }}>
-                          {" "}
-                          Geeksturf takes care of managing and overseeing your
-                          project. $1500 min charge applies
-                        </div>
-                      )}
                     </div>
                     <div className="col-md-6">
                       <div className="form-inner mb-25">
@@ -455,24 +444,65 @@ function JobPost() {
                         </div>
                       </div>
                       <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
-                        <div className="form-group two">
+                        <div className="form-group two"
+                         onMouseOver={() => {
+                          setNotify({ ...notify, development: true });
+                        }}
+                        onMouseOut={() => {
+                          setNotify({ ...notify, development: false });
+                        }}
+                        >
                           <input
                             type="checkbox"
-                            id="terms2"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setRequestHand("handInDevelopment");
-                              } else {
-                                setRequestHand("");
-                              }
-                            }}
+                            id="terms2" 
                           />
                           <label htmlFor="terms2">
                             Request Geeksturf Hands in Development
                           </label>
                         </div>
                       </div>
-                      {requestHand === "handInDevelopment" && (
+
+                      {jobType === "freelancing" && (
+                        <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                          <div
+                            className="form-group two"
+                            onMouseOver={() => {
+                              setNotify({ ...notify, projectManager: true });
+                            }}
+                            onMouseOut={() => {
+                              setNotify({ ...notify, projectManager: false });
+                            }}
+                          >
+                            <input
+                              type="checkbox"
+                              id="projectManager" 
+                            />
+                            <label htmlFor="projectManager">
+                              Request Geeksturf as your project manaager
+                            </label>
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
+                        <div
+                          className="form-group two"
+                          onMouseOver={() => {
+                            setNotify({ ...notify, expressHiring: true });
+                          }}
+                          onMouseLeave={() => {
+                            setNotify({ ...notify, expressHiring: false });
+                          }}
+                        >
+                          <input
+                            type="checkbox"
+                            id="terms3" 
+                          />
+                          <label htmlFor="terms3">Express Hiring</label>
+                        </div>
+                      </div>
+
+                      {notify.development && (
                         <div className="mb-2" style={{ fontSize: "10px" }}>
                           Requesting the assistance of Geeksturf's in-house
                           developers. Geeksturf will evaluate the feasibility of
@@ -483,35 +513,25 @@ function JobPost() {
                         </div>
                       )}
 
-                      {/* <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
-                        <div className="form-group two">
-                          <input
-                            type="checkbox"
-                            id="terms3"
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setRequestHand("projectManager");
-                              } else {
-                                setRequestHand("");
-                              }
-                            }}
-                          />
-                          <label htmlFor="terms3">
-                            Request Geeksturf as Project Manager
-                          </label>
-                        </div>
-                      </div> */}
+                      {notify.expressHiring && (
+                       <div
+                       className="mb-2"
+                       style={{ fontSize: "10px" }}
+                     >
+                       Geeksturf facilitates all the hiring process.
+                       This service costs $50
+                     </div>
+                      )}
+ 
 
-                      {/* {requestHand === "projectManager" && (
-                        <div className="mb-2" style={{ fontSize: "10px" }}>
-                          Requesting the assistance of Geeksturf's in-house
-                          developers. Geeksturf will evaluate the feasibility of
-                          working on your project. In case of unavailability,
-                          Geeksturf will provide suitable recommendations. The
-                          minimum cost for this service is $8,000 if your
-                          request is accepted.
+{notify.projectManager && (
+                        <div className="mb-25 " style={{ fontSize: "12px" }}> 
+                          Geeksturf takes care of managing and overseeing your
+                          project. $1500 min charge applies
                         </div>
-                      )} */}
+                      )} 
+
+ 
                     </div>
 
                     <div className="col-md-12">

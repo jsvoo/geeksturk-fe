@@ -6,7 +6,7 @@ import Layout from "../layout/Layout";
 function CompanyDetails() {
   return (
     <Layout>
-      <Breadcrumb pageName="Company Details" pageTitle="Company Details" />
+      {/* <Breadcrumb pageName="Company Details" pageTitle="Company Details" /> */}
       <div className="company-details-area pt-120 mb-120">
         <div className="container">
           <div className="row">

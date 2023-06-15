@@ -2,8 +2,7 @@
   cursor: pointer;
 }
 .header-logo-section .logo {
-  width: 100px;
-  height: 50px;
+  width: 150px;
   background-color: #00A7AC;
 }
 .header-logo-section .logo img {

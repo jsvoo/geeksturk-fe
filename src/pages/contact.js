@@ -11,7 +11,7 @@ function ContactPage() {
   });
   return (
     <Layout>
-      <Breadcrumb pageName="Contact" pageTitle="Contact" />
+      {/* <Breadcrumb pageName="Contact" pageTitle="Contact" /> */}
       <ContactPageContent />
     </Layout>
   );

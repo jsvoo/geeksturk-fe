@@ -11,7 +11,7 @@ Template Name: Geeksturf- Job Portal HTML Template
 }
 
 :root {
-  --primary-color1: #0a66c2;
+  --primary-color1: #00a7ac;
   --primary-dark: #000000;
   --title-color1: #061421;
   --text-color1: #595959;
@@ -6340,7 +6340,7 @@ header.style-7 {
       content: "";
       height: 100%;
       width: 3px;
-      background: rgba(#0a66c2, 0.25);
+      background: rgba(#00a7ac, 0.25);
        position: absolute;
       top: 0;
       left: 0;
@@ -8325,7 +8325,7 @@ header.style-7 {
     }
     .form-agreement {
       padding-top: 18px;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
       label {
         font-size: 16px;
         font-weight: 500;
@@ -16412,11 +16412,12 @@ header.style-7 {
  Hero Two
 =======================================*/
 .hero2 {
-  background-image: url(../images/bg/home2-banner-bg.png);
-  background-color: rgba(#000, 0.65);
+  // background-image: url(../images/bg/banner1.png);
+  // background-color: rgba(#000, 0.65);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  padding: 30px 0px;
 
   .hero-wapper {
     overflow: hidden;
@@ -16438,7 +16439,9 @@ header.style-7 {
         width: 100%;
       }
       @include lg-down-device() {
-        padding: 120px 10px;
+        // padding: 120px 10px;
+        padding: 10px;
+        // font-size: 20px;
       }
       @include sm-down-device() {
         text-align: center;
@@ -16448,7 +16451,7 @@ header.style-7 {
         font-family: var(--font-exo2);
         line-height: 1.2;
         // line-height: 1.15;
-        margin-bottom: 25px;
+        // margin-bottom: 5px;
         @include xxl-down-device() {
           font-size: 3.8rem;
         }
@@ -16456,7 +16459,7 @@ header.style-7 {
           font-size: 3.5rem;
         }
         @include sm-down-device() {
-          font-size: 3.2rem;
+          font-size: 2rem;
         }
         span {
           font-weight: 700;
