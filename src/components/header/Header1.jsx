@@ -72,7 +72,7 @@ function Header1() {
   return (
     <>
       <Head>
-        <title>Geeksturf- Job Portal NextJs Template</title>
+        <title>Geeksturf</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
         <meta
@@ -97,10 +97,10 @@ function Header1() {
       >
         <div className="header-main-logo d-lg-block d-none header-logo-section">
           <div className="logo">
-            <Link legacyBehavior href="/"> 
+            <Link legacyBehavior href="/">
               <img alt="image" src="assets/images/icon/logo.jpg" />
             </Link>
-          </div> 
+          </div>
         </div>
         <div className="menu-topbar-area">
           {/* <div className="top-bar">
@@ -159,21 +159,20 @@ function Header1() {
             </div>
           </div> */}
 
-          
           <div className="menu-area mt-2">
             <div className="header-logo header-logo-section">
-            <div className="logo">
-            <Link legacyBehavior href="/"> 
-              <img alt="image" src="assets/images/icon/logo.jpg" />
-            </Link>
-          </div> 
+              <div className="logo">
+                <Link legacyBehavior href="/">
+                  <img alt="image" src="assets/images/icon/logo.jpg" />
+                </Link>
+              </div>
             </div>
             <div className="main-menu">
               <div className="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                 <div className="mobile-logo-wrap">
-                <Link legacyBehavior href="/"> 
-              <img alt="image" src="assets/images/icon/logo.jpg" />
-            </Link>
+                  <Link legacyBehavior href="/">
+                    <img alt="image" src="assets/images/icon/logo.jpg" />
+                  </Link>
                 </div>
                 <div className="menu-close-btn">
                   <i className="bi bi-x-lg" />
@@ -190,15 +189,19 @@ function Header1() {
                   />
                    */}
                 </li>
-                <li className="menu-item-has-children">
-                  <Link legacyBehavior href="#" className="drop-down">
+                <li className="menu-item-has-childrenfg">
+                  <Link
+                    legacyBehavior
+                    href="/job-listing1"
+                    className="drop-downtr"
+                  >
                     <a>Jobs</a>
                   </Link>
-                  <i
+                  {/* <i
                     className="bi bi-plus dropdown-icon"
                     onClick={() => handleMenu("job-category")}
-                  />
-                  <ul
+                  /> */}
+                  {/* <ul
                     className={
                       state.activeMenu === "job-category"
                         ? "sub-menu d-block"
@@ -221,7 +224,7 @@ function Header1() {
                         <a>Job Details</a>
                       </Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="menu-item-has-children">
                   <a href="#" className="drop-down">
@@ -280,12 +283,13 @@ function Header1() {
                 </li>
                 <li className="menu-item-has-children">
                   <Link legacyBehavior href="#">
-                    <a>People</a>
+                    {/* <a>People</a> */}
+                    <a>Experts</a>
                   </Link>
-                  <i
+                  {/* <i
                     className="bi bi-plus dropdown-icon"
                     onClick={() => handleMenu("company")}
-                  />
+                  /> */}
                   <ul
                     className={
                       state.activeMenu === "company"
@@ -311,11 +315,12 @@ function Header1() {
                   </ul>
                 </li>
                 <li className="">
-                  <a href="/company-listing1">Companies</a>
-                  <i
+                  {/* <a href="/company-listing1">Companies</a> */}
+                  <a href="/blog-grid">Learning</a>
+                  {/* <i
                     className="bi bi-plus dropdown-icon"
                     onClick={() => handleMenu("blog")}
-                  />
+                  /> */}
                   {/* <ul
                     className={
                       state.activeMenu === "blog"
@@ -340,11 +345,11 @@ function Header1() {
                     </li>
                   </ul> */}
                 </li>
-                <li>
+                {/* <li>
                   <Link legacyBehavior href="/contact">
                     <a>Contact</a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
               <div className="for-mobile-menu d-lg-none d-block">
                 <div className="sign-in-btn mb-25">
@@ -362,13 +367,12 @@ function Header1() {
                     </a>
                   </Link>
 
-                  <div className="post-job-btn mt-2"> 
-                    <Link className="primry-btn-2 lg-btn" href={"/register"}> 
-                        Join Now
-                    </Link> 
-                  </div>
+                  {/* <div className="post-job-btn mt-2">
+                    <Link className="primry-btn-2 lg-btn" href={"/register"}>
+                      Join Now
+                    </Link>
+                  </div> */}
                 </div>
-
 
                 {/* <div className="post-job-btn mb-30">
                   <Link legacyBehavior href="#">
@@ -385,9 +389,6 @@ function Header1() {
                     </a>
                   </Link>
                 </div> */}
-
-
-
 
                 {/* <div className="social-area">
                   <ul>
@@ -415,6 +416,11 @@ function Header1() {
                 </div> */}
               </div>
             </div>
+
+            <div className="nav-search-section">
+              <input type="search" placeholder="Find anything" />
+            </div>
+
             <div className="nav-right d-flex jsutify-content-end align-items-center">
               <ul>
                 <li>
@@ -537,10 +543,8 @@ function Header1() {
                   </div>
                 </li>
                 <li className="d-md-flex d-none  ps-2">
-                <div className="business-area d-flex gap-2">
-
-
-                {/* <div className="post-job-btn ">
+                  <div className="business-area d-flex gap-2">
+                    {/* <div className="post-job-btn ">
                     <Link legacyBehavior href="/job-post">
                       <a className="primry-btn-2 lg-btn">
                         For Business
@@ -556,28 +560,28 @@ function Header1() {
                     </Link>
                   </div> */}
 
-
-                <div className="post-job-btn">
-                    {/* <Link legacyBehavior href="/job-post"> */}
-                    <Link className="primry-btn-2 lg-btn" href={"/register"}>
-                     {/* <a className="primry-btn-2 lg-btn"> */}
+                    <div className="post-job-btn">
+                      {/* <Link legacyBehavior href="/job-post"> */}
+                      {/* <Link className="primry-btn-2 lg-btn" href={"/register"}>
+                        <a className="primry-btn-2 lg-btn">
                         Join Now
-                        {/* <svg
+                        <svg
                           width={15}
                           height={13}
                           viewBox="0 0 15 13"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path d="M10.1367 0H4.86329C4.66914 0 4.51173 0.151188 4.51173 0.337662V1.79366H1.43168C0.642247 1.79363 0 2.41049 0 3.16868V11.6249C0 12.3831 0.642247 13 1.43168 13H13.5683C14.3578 13 15 12.3831 15 11.6249V3.16868C15 2.41049 14.3578 1.79363 13.5683 1.79363H10.4883V0.337662C10.4883 0.15116 10.3309 0 10.1367 0ZM5.21485 0.675325H9.78518V1.79366H5.21485V0.675325ZM13.5683 12.3247H1.43168C1.02996 12.3247 0.703126 12.0108 0.703126 11.625V5.31469L5.6836 7.11899V8.14608C5.6836 8.33255 5.84102 8.48374 6.03517 8.48374H8.96486C9.15901 8.48374 9.31642 8.33255 9.31642 8.14608V7.11899L14.2969 5.31472V11.625C14.2969 12.0108 13.9701 12.3247 13.5683 12.3247ZM6.38673 7.80841V6.79543H8.6133V7.80841H6.38673ZM14.2969 3.16868V4.59294L9.3108 6.39926C9.28191 6.24073 9.13821 6.1201 8.96486 6.1201H6.03517C5.86182 6.1201 5.71812 6.2407 5.68923 6.39926L0.703126 4.59297V3.16868C0.703126 2.78284 1.02993 2.46896 1.43168 2.46896H13.5683C13.9701 2.46896 14.2969 2.78284 14.2969 3.16868ZM13.4071 11.0443C13.4071 11.2308 13.2497 11.382 13.0555 11.382H10.1697C9.97558 11.382 9.81816 11.2308 9.81816 11.0443C9.81816 10.8578 9.97558 10.7067 10.1697 10.7067H13.0555C13.2497 10.7067 13.4071 10.8578 13.4071 11.0443ZM1.89337 3.67202C1.89337 3.48555 2.05079 3.33436 2.24494 3.33436H4.09064C4.28479 3.33436 4.44221 3.48555 4.44221 3.67202C4.44221 3.8585 4.28479 4.00968 4.09064 4.00968H2.24494C2.05079 4.00968 1.89337 3.8585 1.89337 3.67202Z" />
-                        </svg> */}
-                      {/* </a> */}
-                    </Link>
-                     
-                    {/* </Link> */}
+                        </svg>
+                        </a>
+                      </Link> */}
+
+                      {/* </Link> */}
+                    </div>
                   </div>
-                </div>
                 </li>
               </ul>
+
               <div className="sidebar-button mobile-menu-btn ">
                 <i className="bi bi-list" />
               </div>

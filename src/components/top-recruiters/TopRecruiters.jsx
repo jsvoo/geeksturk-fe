@@ -4,7 +4,7 @@ import Slider from "react-slick";
 function TopRecruiters() {
   const slider = useMemo(() => {
     return {
-      rows: 2,
+      rows: 3,
       dots: false,
       arrows: true,
       infinite: true,
@@ -66,7 +66,7 @@ function TopRecruiters() {
           <div className="col-12 d-flex flex-wrap align-items-end justify-content-md-between justify-content-start gap-3">
             <div className="section-title1">
               <h2>
-                Our Top <span>Recruiters</span>
+                Our Top <span>Experts</span>
               </h2>
               <p>
                 To choose your trending job dream &amp; to make future bright.
