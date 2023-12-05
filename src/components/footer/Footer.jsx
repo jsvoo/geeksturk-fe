@@ -162,10 +162,10 @@ function Footer() {
           </div> */}
         </div>
         <div className="footer-btm">
-          <div className="footer-logo">
+          {/* <div className="footer-logo">
             <img src="/assets/images/footer-logo.svg" alt="" />
-          </div>
-          <div className="row align-items-center">
+          </div> */}
+          {/* <div className="row align-items-center">
             <div className="col-lg-6 d-flex justify-content-lg-start justify-content-center">
               <div className="support">
                 <div className="icon">
@@ -197,19 +197,11 @@ function Footer() {
                 </ul>
               </div>
             </div>
-          </div>
-          <div className="row border-top align-items-center">
-            <div className="col-lg-6 d-flex  justify-content-lg-start justify-content-center">
-              <div className="copyright-area">
-                <p>
-                  @Copyright 2023 <a href="#">Geeksturf</a> | Design By
-                  <a href="https://www.Egenstheme.com/">&nbsp;Egenstheme</a>
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
+          </div> */}
+          <div className="row border-top align-items-center justify-content-between">
+            <div className="col-lg-6 d-flex justify-content-lg-start justify-content-center">
               <div className="social-area">
-                <h6>Follow Geeksturf:</h6>
+                <h6>Our Socials:</h6>
                 <ul>
                   <li>
                     <a href="https://www.facebook.com/">
@@ -232,6 +224,17 @@ function Footer() {
                     </a>
                   </li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-6 d-flex  justify-content-lg-end justify-content-center">
+              <div className="copyright-area">
+                <p>
+                  @Copyright 2023 <a href="#">Geeksturf</a> | Built with 💗 by
+                  <a href="https://www.Egenstheme.com/">
+                    &nbsp;The Geeksturf Team
+                  </a>
+                </p>
               </div>
             </div>
           </div>
