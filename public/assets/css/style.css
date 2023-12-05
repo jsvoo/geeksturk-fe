@@ -590,7 +590,7 @@ select:focus {
 }
 
 /*=======================================
- 5. Buttons 
+ 5. Buttons
 =======================================*/
 .lg-btn {
   padding: 9px 28px;
@@ -1842,8 +1842,8 @@ header.style-1 .header-logo {
   }
 }
 header.style-1 .header-logo img {
-  min-width: 120px;
-  max-width: 100%;
+  min-width: 20px;
+  max-width: 40%;
 }
 header.style-1 .menu-close-btn i {
   color: var(--title-color1);
@@ -20523,6 +20523,10 @@ header.style-7 .main-menu ul li.menu-item-has-children > i {
 }
 .home6-top-recruiters .recruters-card:hover {
   border: 1px solid rgba(0, 167, 172, 0.5);
+}
+
+.deadline p {
+  font-size: 14px !important;
 }
 
 /*=======================================

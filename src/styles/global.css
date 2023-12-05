@@ -3,7 +3,6 @@
 }
 .header-logo-section .logo {
   width: 150px;
-  background-color: #00A7AC;
 }
 .header-logo-section .logo img {
   width: 100%;
@@ -20,4 +19,39 @@
   line-height: normal;
   font-weight: 600;
   color: black;
+}
+
+header .nav-search-section {
+  width: 30%;
+}
+header .nav-search-section input {
+  box-shadow: 0px 0px 5px 1px rgb(236, 239, 241) !important;
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  .header-logo,
+  .header-logo-section {
+    padding: 0px !important;
+  }
+  .header-logo .logo,
+  .header-logo-section .logo {
+    width: 80px;
+  }
+  .header-logo img,
+  .header-logo-section img {
+    min-width: 80px !important;
+    max-width: 80px !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+  header .nav-search-section {
+    width: 60%;
+    margin: 0px 10px;
+  }
+  .hero2 .hero-wapper .hero-content .job-search-area {
+    background: transparent !important;
+  }
 }/*# sourceMappingURL=global.css.map */

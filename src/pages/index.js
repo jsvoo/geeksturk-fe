@@ -11,6 +11,7 @@ import TopRecruiters1 from "../components/top-recruiters/TopRecruiters";
 import TrustedCompany1 from "../components/trusted-company/TrustedCompany1";
 import WorkProcess1 from "../components/work-process/WorkProcess1";
 import Banner2 from "../components/banner/Banner2";
+import FeaturedProjects from "../components/featured-projects/FeaturedProjects";
 
 export default function Home() {
   const currentPage = useRouter().pathname;
@@ -21,6 +22,7 @@ export default function Home() {
     <>
       <Header1 />
       <Banner2/>
+      <FeaturedProjects />
       <Feature1 />
       {/* <Category1 /> */}
       {/* <WorkProcess1 /> */}
