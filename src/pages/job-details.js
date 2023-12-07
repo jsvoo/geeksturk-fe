@@ -3,12 +3,20 @@ import Breadcrumb from "../components/common/Breadcrumb";
 import CompanyGallary from "../components/jobDetails/CompanyGallary";
 import RelatedJobs from "../components/jobDetails/RelatedJobs";
 import Layout from "../layout/Layout";
-
+import { FaAngleLeft } from "react-icons/fa";
+import { useRouter } from "next/router";
 function jobDetails() {
+  const router = useRouter();
   return (
     <Layout>
       {/* <Breadcrumb pageName="Job Details" pageTitle="Job Details" /> */}
-      <div className="job-details-pages pt-120 mb-120">
+      <div
+        className="container pointer mt-4 d-flex align-items-center"
+        onClick={() => router.back()}
+      >
+        <FaAngleLeft /> Back
+      </div>
+      <div className="job-details-pages mt-4 mb-120">
         <div className="container">
           <div className="row g-lg-4 gy-5">
             <div className="col-lg-8">

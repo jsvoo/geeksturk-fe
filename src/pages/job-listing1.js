@@ -10,7 +10,7 @@ function JobListing1() {
   useEffect(() => {
     document.body.className = currentPage === "/job-listing1" ? "bg-wight" : "";
   });
-  const [isGrid, setIsGrid] = useState(true);
+  const [isGrid, setIsGrid] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const handleGridClick = () => {
     setIsGrid(true);
@@ -432,7 +432,7 @@ function JobListing1() {
                       </div>
                       <div className="grid-area">
                         <ul>
-                          <li style={{ cursor: "pointer" }}>
+                          {/* <li style={{ cursor: "pointer" }}>
                             <div
                               className={isGrid ? "active" : ""}
                               onClick={handleGridClick}
@@ -469,7 +469,7 @@ function JobListing1() {
                                 <path d="M20.561 12.5034H6.95229C6.15787 12.5034 5.51367 13.1754 5.51367 14.0042C5.51367 14.833 6.15782 15.5049 6.95229 15.5049H20.561C21.3554 15.5049 21.9996 14.833 21.9996 14.0042C21.9996 13.1754 21.3554 12.5034 20.561 12.5034Z" />
                               </svg>
                             </div>
-                          </li>
+                          </li> */}
 
                           <li style={{ cursor: "pointer" }}>
                             <div

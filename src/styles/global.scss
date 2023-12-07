@@ -1,3 +1,8 @@
+.pointer {
+  cursor: pointer;
+  user-select: none;
+}
+
 .header-logo-section {
   cursor: pointer;
   .logo {
@@ -51,15 +56,14 @@ header {
   }
   header {
     .nav-search-section {
-          width: 60%;
+      width: 60%;
       margin: 0px 10px;
     }
   }
 
   .hero2 .hero-wapper .hero-content .job-search-area {
     background: transparent !important;
-
-}
+  }
 }
 //  .business-area{
 //     border-left: 1px solid grey;

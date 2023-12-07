@@ -18,8 +18,8 @@ function JobPost() {
   const [startDate, setStartDate] = useState(new Date());
   const [showInputBox, setShowInputBox] = useState("");
   const [inputValue, setInputValue] = React.useState("");
-  const [value, setValue] = React.useState([]); 
-  const [jobType, setJobType] = useState(""); 
+  const [value, setValue] = React.useState([]);
+  const [jobType, setJobType] = useState("");
 
   const [notify, setNotify] = useState({
     expressHiring: false,
@@ -83,7 +83,7 @@ function JobPost() {
   return (
     <Layout>
       {/* <Breadcrumb pageName="Post A Jobs" pageTitle="Post A Jobs" /> */}
-      <div className="job-post-area pt-120 mb-120">
+      <div className="job-post-area  mb-120">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -235,8 +235,8 @@ function JobPost() {
                       </div>
                     </div>
 
-                    <div className="col-md-6">
-                      <div className="form-inner">
+                    <div className="col-md-6 r">
+                      <div className="form-inner r">
                         {/* <div className="salary-wrap">
                           <label className="label">Employment Type*</label>
                           <div className="salery-select-area">
@@ -268,11 +268,11 @@ function JobPost() {
                               </label>
                               <br />
                             </div>
- 
+
                           </div>
                         </div> */}
 
-                        <div className="form-inner ">
+                        {/* <div className="form-inner ">
                         <label>Employment Type*</label>
                         <div className="input-area">
                           <img src="assets/images/icon/company-2.svg"  alt="" />
@@ -281,10 +281,10 @@ function JobPost() {
                           >
                             <option value={"default"}>Default</option>
                             <option value={"staffExtension"}>Staff Extension</option>
-                           
+
                           </select>
                         </div>
-                      </div>
+                      </div> */}
                         <div className="row">
                           <div className="col-lg-12">
                             {showInputBox === "staffExtension" && (
@@ -303,7 +303,7 @@ function JobPost() {
                               </div>
                             )}
 
-                             
+
                           </div>
                           <div className="col-lg-12">
                             <div id="rangePrice">
@@ -454,7 +454,7 @@ function JobPost() {
                         >
                           <input
                             type="checkbox"
-                            id="terms2" 
+                            id="terms2"
                           />
                           <label htmlFor="terms2">
                             Request Geeksturf Hands in Development
@@ -475,7 +475,7 @@ function JobPost() {
                           >
                             <input
                               type="checkbox"
-                              id="projectManager" 
+                              id="projectManager"
                             />
                             <label htmlFor="projectManager">
                               Request Geeksturf as your project manaager
@@ -496,7 +496,7 @@ function JobPost() {
                         >
                           <input
                             type="checkbox"
-                            id="terms3" 
+                            id="terms3"
                           />
                           <label htmlFor="terms3">Express Hiring</label>
                         </div>
@@ -522,16 +522,16 @@ function JobPost() {
                        This service costs $50
                      </div>
                       )}
- 
+
 
 {notify.projectManager && (
-                        <div className="mb-25 " style={{ fontSize: "12px" }}> 
+                        <div className="mb-25 " style={{ fontSize: "12px" }}>
                           Geeksturf takes care of managing and overseeing your
                           project. $1500 min charge applies
                         </div>
-                      )} 
+                      )}
 
- 
+
                     </div>
 
                     <div className="col-md-12">

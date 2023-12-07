@@ -327,7 +327,7 @@ i.bx {
   }
 }
 .pt-120 {
-  padding-top: 120px;
+  padding-top: 50px;
 
   @include lg-device() {
     padding-top: 90px;
@@ -6341,7 +6341,7 @@ header.style-7 {
       height: 100%;
       width: 3px;
       background: rgba(#00a7ac, 0.25);
-       position: absolute;
+      position: absolute;
       top: 0;
       left: 0;
       border-radius: 5px 0px 0px 5px;
@@ -20476,10 +20476,10 @@ header.style-7 {
   }
 }
 
-.deadline{
-p{
-  font-size: 14px !important;
-}
+.deadline {
+  p {
+    font-size: 14px !important;
+  }
 }
 
 /*=======================================
