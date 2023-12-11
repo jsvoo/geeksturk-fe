@@ -417,9 +417,9 @@ function Header1() {
               </div>
             </div>
 
-            <div className="nav-search-section">
+            {/* <div className="nav-search-section">
               <input type="search" placeholder="Find anything" />
-            </div>
+            </div> */}
 
             <div className="nav-right d-flex jsutify-content-end align-items-center">
               <ul>

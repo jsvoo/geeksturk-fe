@@ -91,6 +91,9 @@ function JobPost() {
                 <form>
                   <div className="row">
                     <div className="col-lg-12">
+                      <div className="d-flex justify-content-end">
+                        <h5>Section 1/4</h5>
+                      </div>{" "}
                       <div className="section-title2">
                         <h5>Job Information:</h5>
                       </div>
@@ -235,8 +238,8 @@ function JobPost() {
                       </div>
                     </div>
 
-                    <div className="col-md-6 r">
-                      <div className="form-inner r">
+                    <div className="col-md-6r">
+                      <div className="form-innerr">
                         {/* <div className="salary-wrap">
                           <label className="label">Employment Type*</label>
                           <div className="salery-select-area">
@@ -302,8 +305,6 @@ function JobPost() {
                                 licensing arrangement
                               </div>
                             )}
-
-
                           </div>
                           <div className="col-lg-12">
                             <div id="rangePrice">
@@ -434,7 +435,7 @@ function JobPost() {
                         />
                       </div>
                     </div>
-                    <div className="col-md-12">
+                    {/* <div className="col-md-12">
                       <div className="form-agreement form-inner d-flex justify-content-between flex-wrap">
                         <div className="form-group two">
                           <input type="checkbox" id="terms1" />
@@ -532,7 +533,7 @@ function JobPost() {
                       )}
 
 
-                    </div>
+                    </div> */}
 
                     <div className="col-md-12">
                       <div className="form-inner">
