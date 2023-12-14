@@ -40,6 +40,38 @@ header {
   }
 }
 
+.recommended {
+  background-color: rgb(94, 198, 94);
+  margin-left: 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 11px;
+  padding: 5px 10px;
+}
+
+.question-pool {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.question-pill {
+  border: 1px solid grey;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: fit-content;
+  cursor: pointer;
+  &:hover{
+    background-color: rgb(247, 250, 255);
+  color: rgb(65, 63, 63);
+  }
+}
+
+.selected-pill{
+  background-color: rgb(247, 250, 255);
+  color: rgb(65, 63, 63);
+}
+
 @media (max-width: "780px") {
   .header-logo,
   .header-logo-section {

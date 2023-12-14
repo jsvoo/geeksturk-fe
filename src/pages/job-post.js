@@ -6,6 +6,7 @@ import "react-quill/dist/quill.snow.css";
 import CreatableSelect from "react-select/creatable";
 import Breadcrumb from "../components/common/Breadcrumb";
 import Layout from "../layout/Layout";
+import { useRouter } from "next/router";
 const components = {
   DropdownIndicator: null,
   IndicatorsContainer: () => null,
@@ -15,6 +16,8 @@ const createOption = (label) => ({
   value: label,
 });
 function JobPost() {
+  const router = useRouter();
+
   const [startDate, setStartDate] = useState(new Date());
   const [showInputBox, setShowInputBox] = useState("");
   const [inputValue, setInputValue] = React.useState("");
@@ -539,9 +542,11 @@ function JobPost() {
                       <div className="form-inner">
                         <button
                           className="primry-btn-2 lg-btn w-unset"
-                          type="submit"
+                          // type="submit"
+                          type="button"
+                          onClick={() => router.push("/job-post-2")}
                         >
-                          Post Now
+                        Next
                         </button>
                       </div>
                     </div>

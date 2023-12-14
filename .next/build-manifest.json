@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/job-post": [
+    "/job-post-2": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/job-post.js"
+      "static/chunks/pages/job-post-2.js"
     ]
   },
   "ampFirstPages": []
